@@ -17,7 +17,7 @@ pip install ollama tavily-python requests pydantic pymupdf PyPDF2 openai
 ```
 
 ## 🚀 Features
-##✅ Local LLM Execution
+### ✅ Local LLM Execution
 Downloads and uses the following models with Ollama:
 
 - gemma3:4b
@@ -30,3 +30,25 @@ Downloads and uses the following models with Ollama:
 ollama.pull('gemma3:4b')
 ollama.pull('llava:latest')
 ollama.pull('qwen3:4b')
+```
+---
+
+## 🖼️ Image Understanding
+### Uses LLMs to describe local image files:
+
+``` python
+stream = ollama.chat(
+    model='gemma3:4b',
+    messages=[{
+        'role': 'user',
+        'content': "Can you describe this image?",
+        'images': ['<path-to-image>.png']
+    }],
+    stream=True,
+)
+
+for chunk in stream:
+    print(chunk['message']['content'], end='', flush=True)
+```
+
+---
