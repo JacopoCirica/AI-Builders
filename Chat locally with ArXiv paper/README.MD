@@ -6,7 +6,7 @@ This project demonstrates how to combine **local Large Language Models (LLMs)** 
 - Retrieve relevant research papers from the web (e.g., from arXiv)
 - Automatically call tools from within the LLM using function calling
 
-![Chat with Academic Paper](/image_test/Chat_with_academic_paper.png)
+![Chat with Academic Paper](./image_test/Chat_with_academic_paper.png)
 
 ---
 
