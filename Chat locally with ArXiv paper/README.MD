@@ -14,3 +14,18 @@ Install all required packages:
 
 ```bash
 pip install ollama tavily-python requests pydantic pymupdf PyPDF2 openai
+
+## 🚀 Features
+##✅ Local LLM Execution
+Downloads and uses the following models with Ollama:
+
+- gemma3:4b
+
+- llava:latest (for vision tasks)
+
+- qwen3:4b
+
+``` python
+ollama.pull('gemma3:4b')
+ollama.pull('llava:latest')
+ollama.pull('qwen3:4b')
