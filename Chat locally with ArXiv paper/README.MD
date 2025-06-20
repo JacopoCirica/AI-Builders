@@ -14,6 +14,7 @@ Install all required packages:
 
 ```bash
 pip install ollama tavily-python requests pydantic pymupdf PyPDF2 openai
+```
 
 ## 🚀 Features
 ##✅ Local LLM Execution
