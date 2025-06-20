@@ -52,3 +52,28 @@ for chunk in stream:
 ```
 
 ---
+
+## 🔗 Web Tool Calling via Tavily
+A custom tool (get_url) retrieves the top arXiv research paper for a given topic using the Tavily API:
+
+``` python
+def get_url(topic: str):
+    tavily_client = TavilyClient(api_key="your-api-key")
+    response = tavily_client.search(
+        query=f"Tell me the main paper about this topic: {topic}",
+        include_domains=["arxiv.org/abs/"],
+        search_depth="advanced"
+    )
+    return response['results'][0]['url']
+```
+
+This function is registered as a callable tool and can be automatically triggered by the LLM when using the tools argument.
+
+---
+
+## 🔐 Notes
+
+- You need a valid Tavily API key for search integration.
+
+- Ensure Ollama is installed and running locally to use LLMs.
+
